@@ -82,7 +82,7 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
-                <a href="#products" class="hover:text-brand-blue transition-colors">Products</a>
+                <a href="#works" class="hover:text-brand-blue transition-colors">Works</a>
                 <a href="#company" class="hover:text-brand-blue transition-colors">Company</a>
                 <a href="#contact" class="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">Contact</a>
             </nav>
@@ -99,7 +99,7 @@
         <button id="close-menu-btn" class="absolute top-6 right-6 text-slate-900">
             <i data-lucide="x"></i>
         </button>
-        <a href="#products" class="mobile-link hover:text-brand-blue">Products</a>
+        <a href="#works" class="mobile-link hover:text-brand-blue">Works</a>
         <a href="#company" class="mobile-link hover:text-brand-blue">Company</a>
         <a href="#contact" class="mobile-link hover:text-brand-blue">Contact</a>
     </div>
@@ -123,8 +123,8 @@
         </div>
     </section>
 
-    <!-- Products / Services Section -->
-    <section id="products" class="py-24 bg-brand-light border-y border-slate-100">
+    <!-- Works / Services Section -->
+    <section id="works" class="py-24 bg-brand-light border-y border-slate-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-16">
                 <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-3">Our Service</h2>
@@ -134,14 +134,18 @@
             <div class="max-w-3xl mx-auto">
                 <!-- Limican Card -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 group">
-                    <div class="flex items-start justify-between mb-6">
-                        <div>
-                            <span class="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-semibold rounded-full mb-3">SaaS / Welfare</span>
-                            <img src="logo.png" alt="リミカン" class="h-16 w-auto mb-2 -ml-1 object-contain">
-                            <p class="text-sm text-slate-500 mt-1">福祉施設向け上限管理システム</p>
+                    <div class="flex flex-col gap-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-semibold rounded-full">SaaS / Welfare Services</span>
+                            <div class="p-2 md:p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-brand-blue transition-colors">
+                                <i data-lucide="layout-dashboard"></i>
+                            </div>
                         </div>
-                        <div class="p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-brand-blue transition-colors">
-                            <i data-lucide="layout-dashboard"></i>
+                        <div class="flex items-center gap-3 w-full">
+                            <p class="text-xl md:text-2xl font-medium text-slate-600">福祉施設向け上限管理システム | リミカン</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="logo.png" alt="リミカン" class="h-16 md:h-20 w-auto max-w-[280px] object-contain rounded-md border border-slate-200 bg-white p-2 my-2">
                         </div>
                     </div>
 
@@ -171,11 +175,16 @@
                         </li>
                     </ul>
 
-                    <div class="pt-6 border-t border-slate-100">
-                         <div class="flex items-center gap-2 text-xs text-slate-400">
-                            <i data-lucide="layers" class="w-4 h-4"></i>
-                            <span>対応福祉事業: 放課後等デイサービス (他、随時追加予定)</span>
-                        </div>
+                    <div class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        <span>対応福祉事業: 放課後等デイサービス (他、随時追加予定)</span>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-100 flex items-end justify-end">
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue bg-blue-50 px-4 py-2 rounded-full hover:bg-brand-blue hover:text-white transition-colors">
+                            サービスサイトこちら
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -186,8 +195,8 @@
     <section id="company" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6">
              <div class="mb-16">
-                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-3">About Us</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Company</h3>
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-3">Company</h2>
+                <h3 class="text-3xl font-bold text-slate-900">会社概要</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-y-8 gap-x-12 text-sm border-t border-slate-100 pt-8">
@@ -252,7 +261,7 @@
                 Blank Inc.
             </div>
             <p class="text-xs text-slate-400">
-                &copy; 2021 Blank Inc. All Rights Reserved.
+                &copy; 2026 Blank Inc. All Rights Reserved.
             </p>
         </div>
     </footer>
