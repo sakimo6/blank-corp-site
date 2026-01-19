@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社Blank | Where Ideas Begin.</title>
+    <meta name="description" content="株式会社Blankは、白紙の可能性にテクノロジーで色をつけ、社会をアップデートするテックカンパニーです。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter (English) & Noto Sans JP (Japanese) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#007AFF', // Cerulean Blue equivalent
+                            dark: '#0F172A',
+                            gray: '#64748B',
+                            light: '#F8FAFC',
+                        }
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for Webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        
+        /* Subtle fade-in animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight">
+                Blank Inc.
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
+                <a href="#products" class="hover:text-brand-blue transition-colors">Products</a>
+                <a href="#company" class="hover:text-brand-blue transition-colors">Company</a>
+                <a href="#contact" class="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-900">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-slate-900">
+            <i data-lucide="x"></i>
+        </button>
+        <a href="#products" class="mobile-link hover:text-brand-blue">Products</a>
+        <a href="#company" class="mobile-link hover:text-brand-blue">Company</a>
+        <a href="#contact" class="mobile-link hover:text-brand-blue">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Abstract Background Decoration -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight fade-in-up">
+                Where Ideas Begin.
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-500 font-light mb-8 fade-in-up delay-100">
+                白紙の可能性に、テクノロジーで色をつける。
+            </p>
+            <div class="w-16 h-1 bg-brand-blue mx-auto mb-8 fade-in-up delay-200"></div>
+            <p class="text-sm md:text-base text-slate-400 fade-in-up delay-300">
+                余白から始まる発想を、社会のアップデートへ。
+            </p>
+        </div>
+    </section>
+
+    <!-- Products / Services Section -->
+    <section id="products" class="py-24 bg-brand-light border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-3">Our Service</h2>
+                <h3 class="text-3xl font-bold text-slate-900">私たちのサービス</h3>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Limican Card -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-semibold rounded-full mb-3">SaaS / Welfare</span>
+                            <img src="logo.png" alt="リミカン" class="h-16 w-auto mb-2 -ml-1 object-contain">
+                            <p class="text-sm text-slate-500 mt-1">福祉施設向け上限管理システム</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-brand-blue transition-colors">
+                            <i data-lucide="layout-dashboard"></i>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-700 font-medium text-lg mb-4">
+                        1人あたり2分で上限額管理業務が終わる！
+                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        福祉事業所の利用者負担上限額管理を自動化・見える化するクラウドサービスです。煩雑な事務作業をクラウド化し、工数削減・ミス削減・属人化解消を実現します。
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-blue shrink-0"></i>
+                            <span>上限管理事業者・関係事業者とのやりとりを一元化しFAX不要に</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-blue shrink-0"></i>
+                            <span>デジタル情報管理による処理状況の見える化</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-blue shrink-0"></i>
+                            <span>利用者情報・関係事業者情報の一元管理</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-blue shrink-0"></i>
+                            <span>利用者負担一覧表・上限管理結果票の自動作成・出力</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-6 border-t border-slate-100">
+                         <div class="flex items-center gap-2 text-xs text-slate-400">
+                            <i data-lucide="layers" class="w-4 h-4"></i>
+                            <span>対応福祉事業: 放課後等デイサービス (他、随時追加予定)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+             <div class="mb-16">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-3">About Us</h2>
+                <h3 class="text-3xl font-bold text-slate-900">Company</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-y-8 gap-x-12 text-sm border-t border-slate-100 pt-8">
+                
+                <div class="text-slate-400 font-medium">会社名</div>
+                <div class="text-slate-900 font-medium">株式会社Blank / Blank Inc.</div>
+
+                <div class="text-slate-400 font-medium">設立</div>
+                <div class="text-slate-900">2021年3月31日</div>
+
+                <div class="text-slate-400 font-medium">資本金</div>
+                <div class="text-slate-900">1,463,535円</div>
+
+                <div class="text-slate-400 font-medium">所在地</div>
+                <div class="text-slate-900 leading-relaxed">
+                    〒150-0043<br>
+                    東京都渋谷区道玄坂一丁目１０番８号<br>
+                    渋谷道玄坂東急ビル２FーC
+                </div>
+
+                <div class="text-slate-400 font-medium">メンバー</div>
+                <div class="text-slate-900 space-y-1">
+                    <div>代表取締役　崎本 優</div>
+                    <div>取締役　　　南 政暢</div>
+                    <div>取締役　　　河合 貴史</div>
+                </div>
+
+                <div class="text-slate-400 font-medium">事業内容</div>
+                <div class="text-slate-900">福祉施設向け上限管理システム「リミカン」の開発及び販売</div>
+
+                <div class="text-slate-400 font-medium">公告</div>
+                <div>
+                    <a href="https://blank-inc.notion.site/94bda7634a1e4597a029bda3b1320088" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-brand-blue hover:underline">
+                        電子公告
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact</h2>
+            <p class="text-slate-400 mb-10">
+                事業に関するご質問やご相談は、<br class="md:hidden">下記よりお気軽にお問い合わせください。
+            </p>
+            
+            <a href="mailto:contact@blank-inc.jp" class="inline-flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-brand-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                <i data-lucide="mail"></i>
+                contact@blank-inc.jp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-bold text-slate-900">
+                Blank Inc.
+            </div>
+            <p class="text-xs text-slate-400">
+                &copy; 2021 Blank Inc. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('translate-x-full');
+            if (isHidden) {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body>
+</html>
